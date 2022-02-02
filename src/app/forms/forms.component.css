@@ -1,0 +1,14 @@
+.user-form {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(50%);
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.user-form__submit {
+  padding: 10px;
+}
