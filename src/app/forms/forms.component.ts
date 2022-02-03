@@ -23,9 +23,9 @@ export class FormsComponent {
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     range: new FormGroup({
-      start: new FormControl('none'),
+      start: new FormControl(''),
     }),
-    technology: new FormControl(''),
+    technology: new FormControl(this.foods.values()),
   });
 
 
@@ -34,11 +34,13 @@ export class FormsComponent {
   }
 
 
-
   onSubmit() {
     // const dateOfBirth = this.range.value.toString();
     // console.log(dateOfBirth.split('T', 10)[0]);
     // console.log(this.range.value);
+
+    // console.log(this.profileForm.get('range.start')?.valueChanges.subscribe((v) => { console.log(v) }));
+    // console.log(this.profileForm.patchValue({start: ''}));
     console.log(this.profileForm.value);
     this.profileForm.reset();
   }
